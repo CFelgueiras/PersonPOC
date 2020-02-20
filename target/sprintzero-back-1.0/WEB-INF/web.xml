@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Person</display-name>
+    <data-source>
+        <name>java:global/sprintzero-back</name>
+        <class-name>org.postgresql.ds.PGConnectionPoolDataSource</class-name>
+        <server-name>localhost</server-name>
+        <port-number>5432</port-number>
+        <database-name>poc</database-name>
+        <user>postgres</user>
+        <password>postgres</password>
+        <property>
+            <name>fish.payara.slow-query-threshold-in-seconds</name>
+            <value>5</value>
+        </property>
+        <property>
+            <name>fish.payara.is-connection-validation-required</name>
+            <value>true</value>
+        </property>
+        <property>
+            <name>fish.payara.connection-validation-method</name>
+            <value>custom-validation</value>
+        </property>
+        <property>
+            <name>fish.payara.validation-classname</name>
+            <value>org.glassfish.api.jdbc.validation.PostgresConnectionValidation</value>
+        </property>
+    </data-source>
+</web-app>

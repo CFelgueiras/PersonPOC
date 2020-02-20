@@ -1,0 +1,5 @@
+domain\Person.class
+repository\PersonRepository.class
+rest\JAXRSConfiguration.class
+filter\CorsFilter.class
+rest\PersonEndPoint.class
